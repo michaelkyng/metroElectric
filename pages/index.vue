@@ -1,8 +1,27 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div class="relative">
-    <NavBar class="relative bg-white w-full z-10" />
-    <Hero />
+  <div>
+    <div
+      class="bg-fixed bg-cover bg-center relative after:content-[''] after:absolute after:top-0 after:right-0 after:left-0 after:bottom-0 after:bg-gradient-to-b after:from-black/40 after:to-black/80 after:z-10"
+      style="background-image: url('/bgImage.png')"
+    >
+      <Hero id="index" />
+      <SectionFirst
+        id="about"
+        class="relative p-5 z-20 before:content-[''] before:absolute before:bg-white before:top-0 before:right-0 before:left-0 before:bottom-0 before:-z-10"
+      />
+      <SectionSecond
+        :data="props.data"
+        id="services"
+        class="relative p-5 z-20 before:content-[''] before:absolute before:bg-[#EEEFED] before:top-0 before:right-0 before:left-0 before:bottom-0 before:-z-10"
+      />
+      <SectionThird
+        id="contact"
+        class="relative p-5 z-20 before:content-[''] before:absolute before:bg-white before:top-0 before:right-0 before:left-0 before:bottom-0 before:-z-10"
+      />
+    </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+const props = defineProps(["data"]);
+</script>

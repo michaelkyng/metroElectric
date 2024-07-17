@@ -9,7 +9,8 @@ export default {
         xs: "200px",
       },
       fontFamily: {
-        arial: ["arial", "nunito", "sans-serif"],
+        noto: ["'Noto Serif'", "nunito", "sans-serif"],
+        main: ["Varela Round", "arial", "sans-serif"],
       },
       fontSize: {
         xxs: "10px",
