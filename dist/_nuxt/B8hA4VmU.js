@@ -1,0 +1,1 @@
+import{_ as o,c as t,b as a,w as c,a as n,e as r,o as s,d as _}from"./CQeuCoaJ.js";const d={},l=n("p",null,"Error",-1);function p(u,x){const e=r;return s(),t("div",null,[l,a(e,{to:"/",class:"py-2.5 px-8 border-2 border-green-500"},{default:c(()=>[_("Go Back")]),_:1})])}const i=o(d,[["render",p]]);export{i as default};
