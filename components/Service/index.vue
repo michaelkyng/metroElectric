@@ -14,7 +14,7 @@
         :alt="props.data?.title"
       />
     </div>
-    <div class="flex flex-col gap-5 justify-center items-start">
+    <div class="flex flex-col justify-center items-start">
       <div
         v-motion
         :initial="{ opacity: 1, y: 20 }"
@@ -31,17 +31,6 @@
           {{ props.data?.title }}
         </p>
       </div>
-      <NuxtLink
-        v-motion
-        :initial="{ opacity: 1, y: 50 }"
-        :enter="{ opacity: 1, y: 50 }"
-        :visible-once="{ opacity: 1, y: 0 }"
-        :duration="300"
-        :delay="500"
-        to="/scheduling"
-        class="py-2.5 px-8 text-lg md:text-base bg-[#1C6220] hover:bg-[#113912] transition-colors duration-200 text-white font-semibold"
-        >Schedule Appointment</NuxtLink
-      >
     </div>
   </div>
 </template>
