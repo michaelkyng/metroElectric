@@ -10,11 +10,6 @@
           >Services</NuxtLink
         >
         <NuxtLink
-          to="/#services"
-          class="text-xs sm:text-sm text-white font-medium font-serif border-b-2 border-b-transparent hover:border-b-white transition-colors duration-200"
-          >Schedule Appointment</NuxtLink
-        >
-        <NuxtLink
           to="/intake-form"
           class="text-xs sm:text-sm text-white font-medium font-serif border-b-2 border-b-transparent hover:border-b-white transition-colors duration-200"
           >Investor Relations</NuxtLink
