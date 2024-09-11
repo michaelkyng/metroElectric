@@ -11,7 +11,7 @@ const cards = [
   {
     link: "corporate-ev-fleet",
     image: "corporate.webp",
-    title: "Corporate EV Fleet",
+    title: "Fleet360: Corporate EV Fleet",
     description:
       "We offer comprehensive electric vehicle solutions tailored to corporate clients in Africa. Our services include supplying a diverse range of Electric Vehicles, such as Cars, Buses, tricycles, and Pickups, that facilitate employee mobility and dispatch.",
   },
@@ -27,7 +27,7 @@ const cards = [
     image: "metro.webp",
     title: "Metro Charge: EV Charging Infrastructure ",
     description:
-      "Recognising the importance of supporting infrastructure, Metro Charge is our network of EV charging stations in partnership with SOLATLANTIC Ltd., dedicated to ensuring seamless and convenient charging for all Electric Vehicle users. Our stations will be strategically located to provide easy access and reliability, supporting the growing adoption of EVs across the continent.",
+      "Recognising the importance of supporting infrastructure, Metro Charge is our network of EV charging stations in partnership with Sunphos, dedicated to ensuring seamless and convenient charging for all Electric Vehicle users. Our stations will be strategically located to provide easy access and reliability, supporting the growing adoption of EVs across the continent.",
   },
   {
     link: "ryde",

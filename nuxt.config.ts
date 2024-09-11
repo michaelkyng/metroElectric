@@ -18,4 +18,9 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@vueuse/motion/nuxt"],
   devtools: { enabled: true },
   compatibilityDate: "2024-07-02",
+  runtimeConfig: {
+    public: {
+      Emailjs: "75u1MbtaSAXCYENAL",
+    },
+  },
 });

@@ -7,7 +7,7 @@
       <Hero id="index" />
       <SectionFirst
         id="about"
-        class="relative p-5 z-20 before:content-[''] before:absolute before:bg-white before:top-0 before:right-0 before:left-0 before:bottom-0 before:-z-10"
+        class="relative p-5 z-20 before:content-[''] before:absolute before:bg-[#fefefe] before:top-0 before:right-0 before:left-0 before:bottom-0 before:-z-10"
       />
       <SectionSecond
         :data="props.data"
