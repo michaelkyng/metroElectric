@@ -54,7 +54,7 @@ const cards: Card[] = [
   },
 ];
 </script>
-<style scoped>
+<style>
 html {
   font-family: "Varela Round", sans-serif;
   scroll-behavior: smooth;
