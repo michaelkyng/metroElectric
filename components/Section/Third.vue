@@ -38,7 +38,7 @@
         >
           Reach out to Metropolitan Electric today to schedule an appointment or
           inquire about our services. We are here to assist you with all your
-          electric vehicle needs.
+          Electric Vehicles (EV) needs.
         </p>
 
         <form

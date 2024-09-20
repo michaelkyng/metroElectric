@@ -31,7 +31,7 @@
           :duration="400"
           class="text-base md:text-xl text-white tracking-wide font-serif"
         >
-          Leading the Electric Vehicle Revolution across the Continent
+          Leading the Electric Vehicles (EV) Revolution across the Continent
         </p>
       </div>
       <NuxtLink

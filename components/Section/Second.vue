@@ -37,11 +37,11 @@
           class="font-noto w-full lg:w-3/4 text-base lg:text-lg text-[#505050] tracking-wide"
         >
           At Metropolitan Electric Limited, we provide a comprehensive range of
-          Electric Vehicle (EV) solutions to meet all your transportation needs.
-          From corporate EV fleets to fleet renewal for public transportation,
-          ride-hailing services, and charging infrastructure, we deliver
-          innovative and sustainable mobility solutions tailored for the African
-          market. Our commitment to excellence ensures that you receive
+          Electric Vehicles (EV) solutions to meet all your transportation
+          needs. From corporate EV fleets to fleet renewal for public
+          transportation, ride-hailing services, and charging infrastructure, we
+          deliver innovative and sustainable mobility solutions tailored for the
+          African market. Our commitment to excellence ensures that you receive
           reliable, efficient, and eco-friendly services every step of the way.
           Explore our diverse offerings and join us in driving the future of
           sustainable mobility in Africa.
@@ -51,16 +51,13 @@
         class="relative flex flex-wrap w-full justify-center md:justify-around lg:justify-between gap-y-10"
       >
         <SectionCard
-          v-for="(card, index) in props.data"
+          v-for="(card, index) in data"
           v-motion-fade-visible-once
           :duration="800"
           :delay="400 + 50 * index"
           class="card w-full md:w-80 bg-white hover:!scale-105 transition-all duration-200"
           :ref="card.title"
-          :image="card.image"
-          :title="card.title"
-          :description="card.description"
-          :link="card.link"
+          :data="card"
         />
       </div>
     </div>
@@ -69,5 +66,6 @@
 
 <script lang="ts" setup>
 const { container } = useTailwindConfig();
-const props = defineProps(["data"]);
+import type { Card } from "~/types/types.js";
+defineProps<{ data: Card[] }>();
 </script>

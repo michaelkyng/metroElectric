@@ -10,8 +10,8 @@
     >
       <img
         class="object-cover w-full h-full"
-        :src="`card/${props.data?.image}`"
-        :alt="props.data?.title"
+        :src="`card/${image}`"
+        :alt="title"
       />
     </div>
     <div class="flex flex-col justify-center items-start">
@@ -28,7 +28,7 @@
         <p
           class="font-medium md:font-semibold text-2xl md:text-base text-[#1C6220]"
         >
-          {{ props.data?.title }}
+          {{ title }}
         </p>
       </div>
     </div>
@@ -36,14 +36,27 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps(["data"]);
+const props = defineProps({
+  title: {
+    type: String,
+    required: false,
+  },
+  description: {
+    type: String,
+    required: false,
+  },
+  image: {
+    type: String,
+    required: false,
+  },
+});
 const { container } = useTailwindConfig();
 
 const headTitle = ref("");
 const headDescription = ref("");
 
 watch(
-  () => props.data,
+  () => props,
   (newData) => {
     headTitle.value = newData?.title || "";
     headDescription.value = newData?.description || "";
@@ -51,14 +64,12 @@ watch(
   { immediate: true }
 );
 
-useHead({
+useSeoMeta({
   title: headTitle,
-  meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: headDescription,
-    },
-  ],
+  ogTitle: headTitle,
+  description: headDescription,
+  ogDescription: headDescription,
+  ogImage: props.image,
+  twitterCard: "summary_large_image",
 });
 </script>

@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="p-5 sm:p-10">
-      <Service :data="selectedCard" />
+      <Service
+        v-if="selectedCard"
+        :image="selectedCard.image"
+        :title="selectedCard.title"
+        :description="selectedCard.description"
+      />
     </div>
     <div class="bg-[#1C6220] p-5 sm:p-10">
       <div class="py-32 mx-auto">
@@ -27,17 +32,18 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps(["data"]);
+import type { Card } from "~/types/types.js";
+const props = defineProps<{ data: Card[] }>();
+
 const { container } = useTailwindConfig();
 const route = useRoute();
 const router = useRouter();
 const { title } = route.params;
 
-const selectedCard = ref(null);
+const selectedCard = ref();
 
 onMounted(() => {
   const card = props.data.find((card: any) => card.link === title);
-
   if (title === undefined || title === null) {
     return;
   } else {
@@ -47,5 +53,20 @@ onMounted(() => {
       selectedCard.value = card;
     }
   }
+});
+
+useHead({
+  title: selectedCard.value
+    ? selectedCard.value.title
+    : "Metropolitan Electric",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content: selectedCard.value
+        ? selectedCard.value.description
+        : "Metro Electric",
+    },
+  ],
 });
 </script>
