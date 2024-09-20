@@ -44,15 +44,7 @@ const selectedCard = ref();
 
 onMounted(() => {
   const card = props.data.find((card: any) => card.link === title);
-  if (title === undefined || title === null) {
-    return;
-  } else {
-    if (!card) {
-      router.push({ name: "pageNotFound" });
-    } else {
-      selectedCard.value = card;
-    }
-  }
+  selectedCard.value = card;
 });
 
 useHead({
