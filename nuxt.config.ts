@@ -16,17 +16,24 @@ export default defineNuxtConfig({
       ],
     },
   },
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@vueuse/motion/nuxt",
+    "@zadigetvoltaire/nuxt-gtm",
+    // "@nuxtjs/seo",
+  ],
   site: {
     url: "https://metropolitanelectricng.com",
     name: "Metropolitan Electric",
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@vueuse/motion/nuxt",
-    "@zadigetvoltaire/nuxt-gtm",
-    "@nuxtjs/seo",
-  ],
+  seo: {
+    robots: {
+      UserAgent: "*", // Allow all user agents
+      Disallow: "", // Allow all paths to be indexed
+      Allow: "/", // Explicitly allow the root path
+    },
+  },
   devtools: { enabled: true },
   compatibilityDate: "2024-07-02",
   runtimeConfig: {
