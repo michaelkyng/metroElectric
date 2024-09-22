@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      routes: ["/"],
+    },
+  },
   app: {
     head: {
       charset: "UTF-8",
@@ -20,20 +25,15 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@vueuse/motion/nuxt",
     "@zadigetvoltaire/nuxt-gtm",
-    // "@nuxtjs/seo",
+    "@nuxtjs/seo",
   ],
   site: {
     url: "https://metropolitanelectricng.com",
     name: "Metropolitan Electric",
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
+    indexable: true,
   },
-  seo: {
-    robots: {
-      UserAgent: "*", // Allow all user agents
-      Disallow: "", // Allow all paths to be indexed
-      Allow: "/", // Explicitly allow the root path
-    },
-  },
+
   devtools: { enabled: true },
   compatibilityDate: "2024-07-02",
   runtimeConfig: {
