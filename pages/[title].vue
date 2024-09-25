@@ -47,18 +47,20 @@ onMounted(() => {
   selectedCard.value = card;
 });
 
-useHead({
+useSeoMeta({
   title: selectedCard.value
     ? selectedCard.value.title
     : "Metropolitan Electric",
-  meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: selectedCard.value
-        ? selectedCard.value.description
-        : "Metro Electric",
-    },
-  ],
+  ogTitle: selectedCard.value
+    ? selectedCard.value.title
+    : "Metropolitan Electric",
+  description:
+    "Metropolitan Electric Limited is at the forefront of revolutionizing the Electric Vehicle (EV) industry across Africa.",
+  ogDescription:
+    "Metropolitan Electric Limited is at the forefront of revolutionizing the Electric Vehicle (EV) industry across Africa.",
+  ogImage: selectedCard.value
+    ? selectedCard.value.image
+    : "https://metropolitanelectricng.com/logo.png",
+  twitterCard: "summary_large_image",
 });
 </script>

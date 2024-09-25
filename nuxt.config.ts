@@ -9,16 +9,6 @@ export default defineNuxtConfig({
     head: {
       charset: "UTF-8",
       viewport: "width=device-width, initial-scale=1",
-      title:
-        "Leading the Electric Vehicles (EV) Revolution across the Continent",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Metropolitan Electric Limited is at the forefront of revolutionizing the Electric Vehicle (EV) industry across Africa.",
-        },
-      ],
     },
   },
   modules: [

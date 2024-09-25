@@ -11,6 +11,7 @@
         >
         <NuxtLink
           to="/intake-form"
+          aria-label="Navigate to FeedBack Page"
           class="text-xs sm:text-sm text-white font-medium font-serif border-b-2 border-b-transparent hover:border-b-white transition-colors duration-200"
           >Investor Relations</NuxtLink
         >

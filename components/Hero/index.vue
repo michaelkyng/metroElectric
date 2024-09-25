@@ -46,7 +46,7 @@
         :duration="400"
         to="/#about"
         class="px-8 py-3 text-sm sm:text-base bg-[#1c6220] hover:bg-[#113a13] w-fit font-semibold font-main text-white transition-all duration-200"
-        >Learn More</NuxtLink
+        >Lead The Charge</NuxtLink
       >
     </div>
   </div>

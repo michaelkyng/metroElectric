@@ -2,8 +2,8 @@
   <div class="bg-white">
     <div class="relative" :class="container">
       <div class="flex justify-between bg-white items-center z-20 h-full p-4">
-        <NuxtLink to="/">
-          <img class="h-20" src="/logo.png" alt="Logo" />
+        <NuxtLink to="/" aria-label="Navigate to Home Page">
+          <img class="h-20" src="/logo.png" alt="Metropolitan Logo" />
         </NuxtLink>
         <div class="hidden lg:flex gap-5 items-center">
           <NavLink to-url="/">Home</NavLink>

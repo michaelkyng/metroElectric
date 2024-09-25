@@ -50,7 +50,7 @@
           :visible-once="{ opacity: 1, y: 0 }"
           :duration="400"
           :delay="700"
-          to="#"
+          to="/"
           class="font-main text-sm text-[#505050] underline font-semibold hover:no-underline"
         >
           Discover Our Story

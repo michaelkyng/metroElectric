@@ -1,12 +1,17 @@
 <template>
-  <NuxtLink class="group p-0 shadow-2xl" :to="data.link">
+  <NuxtLink
+    v-if="data"
+    class="group p-0 shadow-2xl"
+    :to="data.link"
+    :aria-label="`Navigate to the ${data.title}`"
+  >
     <div class="h-fit">
       <div class="flex flex-col">
         <div class="w-full h-96 md:h-64 lg:h-56 overflow-clip">
           <img
             class="w-full h-full object-cover"
             :src="`card/${data.image}`"
-            :alt="`card/${data.image}`"
+            :alt="data.title"
           />
         </div>
         <div class="p-5 space-y-5">
