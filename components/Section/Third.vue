@@ -189,7 +189,8 @@ const sendEmail = () => {
           },
           (error) => {
             isLoading.value = false;
-            errorMsg.value = error.text;
+            console.log(error.text);
+            errorMsg.value = "Something Went Wrong, Please try again";
             setTimeout(() => {
               errorMsg.value = "";
             }, 3000);

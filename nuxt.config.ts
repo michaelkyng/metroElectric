@@ -9,6 +9,24 @@ export default defineNuxtConfig({
     head: {
       charset: "UTF-8",
       viewport: "width=device-width, initial-scale=1",
+      title: "Metropolitan Electric",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Metropolitan Electric Limited is at the forefront of revolutionizing the Electric Vehicle (EV) industry across Africa.",
+        },
+        {
+          name: "og:description",
+          content:
+            "Metropolitan Electric Limited is at the forefront of revolutionizing the Electric Vehicle (EV) industry across Africa.",
+        },
+        {
+          name: "og:image",
+          content: "https://metropolitanelectricng.com/logo.png",
+        },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
     },
   },
   modules: [
@@ -20,8 +38,13 @@ export default defineNuxtConfig({
   site: {
     url: "https://metropolitanelectricng.com",
     name: "Metropolitan Electric",
-    defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
-    indexable: true,
+    defaultLocale: "en",
+  },
+  robots: {
+    disallow: ["/_nuxt/", "/_nuxt/builds/", "/_nuxt/meta/"],
+  },
+  sitemap: {
+    exclude: ["/_nuxt/**"],
   },
 
   devtools: { enabled: true },
