@@ -12,7 +12,7 @@ useSeoMeta({
     "Metropolitan Electric Limited is at the forefront of revolutionizing the Electric Vehicle (EV) industry across Africa.",
   ogDescription:
     "Metropolitan Electric Limited is at the forefront of revolutionizing the Electric Vehicle (EV) industry across Africa.",
-  ogImage: "https://metropolitanelectricng.com/logo.png",
+  ogImage: "https://metropolitanelectricng.com/logo.svg",
   twitterCard: "summary_large_image",
 });
 </script>

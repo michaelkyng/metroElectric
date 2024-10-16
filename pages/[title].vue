@@ -37,7 +37,7 @@ const props = defineProps<{ data: Card[] }>();
 
 const { container } = useTailwindConfig();
 const route = useRoute();
-const router = useRouter();
+
 const { title } = route.params;
 
 const selectedCard = ref();
@@ -60,7 +60,7 @@ useSeoMeta({
     "Metropolitan Electric Limited is at the forefront of revolutionizing the Electric Vehicle (EV) industry across Africa.",
   ogImage: selectedCard.value
     ? selectedCard.value.image
-    : "https://metropolitanelectricng.com/logo.png",
+    : "https://metropolitanelectricng.com/logo.svg",
   twitterCard: "summary_large_image",
 });
 </script>

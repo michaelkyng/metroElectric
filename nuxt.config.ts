@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         },
         {
           name: "og:image",
-          content: "https://metropolitanelectricng.com/logo.png",
+          content: "https://metropolitanelectricng.com/logo.svg",
         },
         { name: "twitter:card", content: "summary_large_image" },
       ],
@@ -34,6 +34,8 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@zadigetvoltaire/nuxt-gtm",
     "@nuxtjs/seo",
+    "@nuxt/content",
+    "@nuxt/image",
   ],
   site: {
     url: "https://metropolitanelectricng.com",

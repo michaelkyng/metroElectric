@@ -1,16 +1,18 @@
 <template>
   <div class="bg-white">
     <div class="relative" :class="container">
-      <div class="flex justify-between bg-white items-center z-20 h-full p-4">
+      <div
+        class="flex justify-between bg-white items-center z-20 h-full p-4 md:px-0"
+      >
         <NuxtLink to="/" aria-label="Navigate to Home Page">
-          <img class="h-20" src="/logo.png" alt="Metropolitan Logo" />
+          <img class="h-10" src="/logo.svg" alt="Metropolitan Logo" />
         </NuxtLink>
         <div class="hidden lg:flex gap-5 items-center">
           <NavLink to-url="/">Home</NavLink>
           <NavLink to-url="/#about">About</NavLink>
           <NavLink to-url="/#services">Services</NavLink>
           <NavLink to-url="/#index">Sustainability</NavLink>
-          <NavLink to-url="/#index">Media Center</NavLink>
+          <NavLink to-url="/media-center">Media Center</NavLink>
           <NuxtLink
             to="/#contact"
             class="relative z-10 py-2.5 px-7 font-medium font-main border-2 border-[#113912] hover:bg-[#1C6220] hover:border-[#1C6220] hover:text-white focus:bg-[#30a336] transition-all duration-200 before:absolute before:content-[''] before:top-0 before:left-0 before:right-0 before:bottom-0 focus:before:border-2 focus:text-white before:border-[#30a336] before:rounded-md before:-z-10 focus:before:-top-1.5 focus:before:-right-1.5 focus:before:-left-1.5 focus:before:-bottom-1.5"
@@ -71,7 +73,7 @@
               >Sustainability</NuxtLink
             >
             <NuxtLink
-              to="/#index"
+              to="/media-center"
               @click="menuToggled = !menuToggled"
               class="text-sm sm:text-base border-y border-black/5 px-5 py-2.5 text-black active:text-[#1C6220] w-full"
               exact-active-class="text-[#1C6220]"
