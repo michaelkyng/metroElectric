@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    to="/"
+    :to="`media-center/${slug}`"
     class="group relative flex flex-col h-[500px] w-full justify-end"
   >
     <div>
@@ -17,13 +17,13 @@
         >
           <ArrowRightIcon class="size-10 text-white shrink-0" />
           <div class="flex flex-col">
-            <p class="text-white text-base md:text-lg font-noto">
+            <p class="text-white text-base md:text-lg font-noto line-clamp-2">
               {{ title }}
             </p>
             <h2
-              class="text-white text-2xl md:text-3xl font-main font-semibold md:font-bold"
+              class="text-white text-2xl md:text-3xl font-main font-semibold md:font-bold line-clamp-2"
             >
-              {{ description }}
+              {{ content }}
             </h2>
           </div>
         </div>
@@ -44,7 +44,10 @@ defineProps({
     type: String,
     required: true,
   },
-
+  content: {
+    type: String,
+    required: true,
+  },
   image: {
     type: String,
     required: true,

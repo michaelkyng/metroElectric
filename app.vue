@@ -1,13 +1,13 @@
 <template>
   <div>
     <NavBar class="sticky top-0 bg-white w-full z-30" />
-    <NuxtPage :data="cards" />
+    <NuxtPage :data="cards" :news="news" />
     <Footer class="p-5" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { Card } from "~/types/types";
+import type { Card, NewsItem } from "~/types/types";
 const cards: Card[] = [
   {
     link: "corporate-ev-fleet",
@@ -51,6 +51,59 @@ const cards: Card[] = [
       "Electric Vehicles (EV) Care: Electric Vehicles (EV) Maintenance Services ",
     description:
       "Electric Vehicles (EV) Care offers comprehensive maintenance services to ensure your EV fleet's longevity and optimal performance. Our network of specialised service and maintenance garages will be equipped with the latest technology and staffed by trained professionals. From routine maintenance to advanced repairs, we provide support to keep your Electric Vehicles running smoothly and efficiently.",
+  },
+];
+
+const news: NewsItem[] = [
+  {
+    title: "Groundbreaking Electric Vehicle Technology Unveiled",
+    description:
+      "Today, a new wave of electric vehicle technology was introduced, set to revolutionize the industry.",
+    content:
+      "Today, a new wave of electric vehicle technology was introduced, set to revolutionize the industry. This advancement promises longer battery life, faster charging, and more affordable EV options for the public.",
+    image: "pause",
+    date: "2024-10-15",
+    slug: "groundbreaking-ev-tech-unveiled",
+  },
+  {
+    title: "Metropolitan Electric Launches Sustainable Energy Program",
+    description:
+      "In an effort to combat climate change, Metropolitan Electric announced a new sustainable energy initiative.",
+    content:
+      "In an effort to combat climate change, Metropolitan Electric announced a new sustainable energy initiative. This program focuses on increasing renewable energy use in homes and businesses across Nigeria.",
+    image: "pause",
+    date: "2024-10-10",
+    slug: "sustainable-energy-program-launch",
+  },
+  {
+    title: "New Recycling Facility Opens in Lagos",
+    description:
+      "A state-of-the-art recycling facility has opened in Lagos, capable of processing over 100 tons of plastic waste daily.",
+    content:
+      "A state-of-the-art recycling facility has opened in Lagos, capable of processing over 100 tons of plastic waste daily. This facility is a major step forward in Nigeria’s fight against pollution.",
+    image: "pause",
+    date: "2024-10-05",
+    slug: "new-recycling-facility-lagos",
+  },
+  {
+    title: "Electric Vehicle Sales Surge in 2024",
+    description:
+      "Reports show that electric vehicle sales have surged by 25% this year.",
+    content:
+      "Reports show that electric vehicle sales have surged by 25% this year, with more Nigerians adopting EVs as a sustainable alternative to traditional fuel-powered vehicles.",
+    image: "pause",
+    date: "2024-09-30",
+    slug: "ev-sales-surge-2024",
+  },
+  {
+    title: "Government Introduces New Environmental Regulations",
+    description:
+      "The Nigerian government has introduced new regulations aimed at reducing carbon emissions and promoting sustainable energy solutions.",
+    content:
+      "The Nigerian government has introduced new regulations aimed at reducing carbon emissions and promoting sustainable energy solutions. These regulations are set to take effect in January 2025.",
+    image: "pause",
+    date: "2024-09-20",
+    slug: "new-environmental-regulations",
   },
 ];
 </script>

@@ -43,7 +43,7 @@ const { title } = route.params;
 const selectedCard = ref();
 
 onMounted(() => {
-  const card = props.data.find((card: any) => card.link === title);
+  const card = props.data.find((card: Card) => card.link === title);
   selectedCard.value = card;
 });
 

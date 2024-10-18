@@ -36,6 +36,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxt/content",
     "@nuxt/image",
+    "nuxt-swiper",
   ],
   site: {
     url: "https://metropolitanelectricng.com",
